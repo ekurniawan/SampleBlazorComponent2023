@@ -9,5 +9,15 @@ namespace BethanysPieShopHRM.App.Components
 
         [Parameter]
         public Employee? Employee { get; set; }
+
+        protected override void OnParametersSet()
+        {
+            _employee = Employee;
+        }
+
+        public void Close()
+        {
+            _employee = null;
+        }
     }
 }
