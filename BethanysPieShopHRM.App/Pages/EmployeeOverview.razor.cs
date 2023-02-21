@@ -9,6 +9,7 @@ namespace BethanysPieShopHRM.App.Pages
 
         private Employee? _selectedEmployee;
 
+        private string Title = "Employee overview";
 
         protected override void OnInitialized()
         {
