@@ -1,14 +1,16 @@
-﻿namespace BethanysPieShopHRM.App.Components.Widgets
+﻿using Microsoft.AspNetCore.Components;
+
+namespace BethanysPieShopHRM.App.Components.Widgets
 {
     public partial class InboxWidget
     {
+        [Inject]
         public ApplicationState? ApplicationState { get; set; }
 
         public int MessageCount { get; set; } = 0;
         protected override void OnInitialized()
         {
-            if(ApplicationState!=null)
-                MessageCount = ApplicationState.NumberOfMessages;
+            MessageCount = ApplicationState.NumberOfMessages;
         }
     }
 }
