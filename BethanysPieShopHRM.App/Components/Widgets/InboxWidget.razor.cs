@@ -2,10 +2,13 @@
 {
     public partial class InboxWidget
     {
+        public ApplicationState? ApplicationState { get; set; }
+
         public int MessageCount { get; set; } = 0;
         protected override void OnInitialized()
         {
-            MessageCount = new Random().Next(10);
+            if(ApplicationState!=null)
+                MessageCount = ApplicationState.NumberOfMessages;
         }
     }
 }
