@@ -1,4 +1,6 @@
-﻿namespace BethanysPieShopHRM.App.Services
+﻿using BethanysPieShopHRM.Shared.Domain;
+
+namespace BethanysPieShopHRM.App.Services
 {
     public interface IEmployeeDataService
     {
