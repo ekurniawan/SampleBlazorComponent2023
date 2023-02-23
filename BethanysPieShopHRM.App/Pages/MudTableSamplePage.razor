@@ -1,0 +1,23 @@
+﻿@page "/samplemudtable"
+@using BethanysPieShopHRM.Shared.Domain
+
+<MudTable Hover="true" Items="@Employees" Loading="@_loading"
+          LoadingProgressColor="Color.Info" OnRowClick="RowClickEvent" T="Employee">
+    <HeaderContent>
+        <MudTh>Employee ID</MudTh>
+        <MudTh>First Name</MudTh>
+        <MudTh>Last Name</MudTh>
+        <MudTh>City</MudTh>
+        <MudTh>Email</MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="EmployeeId">@context.EmployeeId</MudTd>
+        <MudTd DataLabel="FirstName">@context.FirstName</MudTd>
+        <MudTd DataLabel="LastName">@context.LastName</MudTd>
+        <MudTd DataLabel="City">@context.City</MudTd>
+        <MudTd DataLabel="Email">@context.Email</MudTd>
+    </RowTemplate>
+</MudTable>
+
+<MudText>@message</MudText>
+<MudSwitch @bind-Checked="_loading">Show Loading</MudSwitch>

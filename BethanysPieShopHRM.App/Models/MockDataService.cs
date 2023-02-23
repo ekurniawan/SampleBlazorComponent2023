@@ -23,6 +23,8 @@ namespace BethanysPieShopHRM.App.Models
             }
         }
 
+
+
         private static List<Employee> InitializeMockEmployees()
         {
             var e1 = new Employee
@@ -79,8 +81,8 @@ namespace BethanysPieShopHRM.App.Models
                 City = "Antwerp",
                 Email = "gill@bethanyspieshop.com",
                 EmployeeId = 2,
-                FirstName = "Gill",
-                LastName = string.Empty,
+                FirstName = "Erick",
+                LastName = "Kurniawan",
                 Gender = Gender.Female,
                 PhoneNumber = "33999909923",
                 Smoker = false,
