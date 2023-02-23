@@ -12,6 +12,9 @@ builder.Services.AddMudServices();
 
 builder.Services.AddHttpClient<IEmployeeDataService,EmployeeDataService>(client=>
 client.BaseAddress=new Uri(builder.HostEnvironment.BaseAddress));
+builder.Services.AddHttpClient<ICountryDataService, CountryDataService>(client => client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress));
+builder.Services.AddHttpClient<IJobCategoryDataService, JobCategoryDataService>(client => client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress));
+
 builder.Services.AddScoped<ApplicationState>();
 builder.Services.AddBlazoredLocalStorage();
 
