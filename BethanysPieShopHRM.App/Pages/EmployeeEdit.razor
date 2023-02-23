@@ -149,6 +149,17 @@
             </div>
         </div>
 
+        <button type="submit" class="btn btn-primary me-1">Save employee</button>
+
+        @if (Employee.EmployeeId > 0)
+        {
+            <button type="button" class="btn btn-danger my-1">
+                Delete
+            </button>
+        }
+
+        <button type="button" class="btn btn-outline-primary ms-1">Back to overview</button>
+
     </EditForm>
 
 </section>
